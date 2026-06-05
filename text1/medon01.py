@@ -9,7 +9,7 @@ load_dotenv()
 
 #硅胶
 llm_claude = init_chat_model(
-    model = 'deepseek-ai/DeepSeek-V4-Flash',  #模型的具体版本
+    model = 'deepseek-ai/DeepSeek-V4-Pro',  #模型的具体版本
     model_provider='openai',    #模型的供应商
     api_key=os.getenv('GJ_API_KEY'),  #key
     base_url=os.getenv('GJ_BASE_URL')
@@ -28,7 +28,8 @@ llm_claude = init_chat_model(
 # print(llm_claude.invoke('用一句话介绍自己').content,end='\n')
 
 conversation = [
-    SystemMessage(content="你是一个有帮助的AI助手")
+    SystemMessage(content="你是一个旅游助手"),
+    HumanMessage(content="终结西安所有热门的景点（直接说名字简洁）")
 ]
 
 
