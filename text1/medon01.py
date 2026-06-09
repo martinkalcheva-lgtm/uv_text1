@@ -9,7 +9,7 @@ load_dotenv()
 
 #硅胶
 llm_claude = init_chat_model(
-    model = 'deepseek-ai/DeepSeek-V4-Pro',  #模型的具体版本
+    model = 'deepseek-ai/DeepSeek-V4-Flash',  #模型的具体版本
     model_provider='openai',    #模型的供应商
     api_key=os.getenv('GJ_API_KEY'),  #key
     base_url=os.getenv('GJ_BASE_URL')
